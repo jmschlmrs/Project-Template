@@ -4,7 +4,8 @@
   "description": "Starting point for web projects.",
   "main": "app.js",
   "scripts": {
-
+    "compile-scss": "node-sass ./public/content/scss -o ./public/content/css",
+    "watch:compile-scss": "onchange './public/content/scss/*.scss' -v -- npm run compile-scss"
   },
   "author": "James Chalmers",
   "license": "ISC",
@@ -14,7 +15,9 @@
   "devDependencies": {
     "babel-core": "^6.11.4",
     "babel-loader": "^6.2.4",
+    "node-sass": "^3.8.0",
     "nodemon": "^1.10.0",
+    "onchange": "^2.5.0",
     "webpack": "^1.13.1"
   }
 }
